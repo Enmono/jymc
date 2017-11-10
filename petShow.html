@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宠物展示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script>
+        $(window).scroll(function (){
+            var scrollPos=$(window).scrollTop();
+            console.log(scrollPos);
+            if (screen.width<768){
+                $('.navbar-default').css("backgroundColor","#fff");
+            }else if(screen.width>768 && scrollPos>220){
+                $('.navbar-default').css("backgroundColor","#b0b0b0");
+            }else{
+                $('.navbar-default').css("backgroundColor","transparent");
+            }
+        })
+    </script>
+</head>
+<body>
+<div class="all-content">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"><i></i></a>
+                <a href="#" class="navbar-brand navbar-right">家有萌宠</a>
+                <a href="#menu" class="navbar-toggle" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </div>
+            <div id="menu" class="collapse navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="petService.html" data-toggle="dropdown">宠物服务
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="petService.html">宠物服务</a></li>
+                            <li><a href="petAdoption.html">宠物寄养</a></li>
+                            <li><a href="petMedical.html">宠物医疗</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="#">宠物展示</a></li>
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <li><a href="contactUs.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img src="imgs/ps1.jpg" class="img-responsive bgbg hidden-xs">
+    <h2 class="tab-h1 hidden-xs">PET</h2>
+    <div id="tip">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="pet-h2">柴犬</h2>
+                    <p class="pet-p">
+                        柴犬是体型中等并且又最古老的犬。
+                    </p>
+                    <p class="pet-p">
+                        柴犬能够应付陡峭的丘陵和山脉的斜坡，拥有灵敏的感官，使得柴犬屡次成为上乘的狩猎犬。
+                    </p>
+                    <p class="pet-p">
+                        柴犬性格活泼、好动。对自己喜欢的玩具、会一天到晚的把玩。
+                        其对外有极强警惕性，能为户主看家护院。其特别是对大型同类，并且不服输。
+                    </p>
+                    <p class="pet-p">
+                        草丛中的耗子、鸟都会是它的猎物及玩具。柴犬是日本国宝，常见的赤色柴犬价格都在6000元到30000元之间。
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="well">
+                    <div id="imgCarousel" class="carousel slide" data-ride="carousel">
+
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <a href="#x" class="thumbnail"><img src="imgs/01.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物1号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/02.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物2号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/03.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物3号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/04.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物4号</p>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                            </div>
+                            <!--/item-->
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/02.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物2号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/03.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物3号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/04.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物4号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/05.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物5号</p>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                            </div>
+                            <!--/item-->
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/03.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物3号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/04.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物4号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/05.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物5号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/06.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物6号</p>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                            </div>
+                            <!--/item-->
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/04.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物4号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/05.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物5号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/06.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物6号</p>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="imgs/07.jpg" alt="Image" class="img-responsive"></a>
+                                        <p>小萌物7号</p>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                            </div>
+                            <!--/item-->
+                        </div>
+                        <!--/carousel-inner-->
+
+                        <a class="left carousel-control" href="#imgCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+
+                        <a class="right carousel-control" href="#imgCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+                    </div>
+                    <!--/myCarousel-->
+                </div>
+                <!--/well-->
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">版权所有 ©2017 - 2017 家有萌宠</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

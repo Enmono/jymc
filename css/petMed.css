@@ -1,0 +1,24 @@
+
+.adop-p-h1{
+    display: inline-block;
+    padding-right: 50px;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #acafa5;
+    width:40%;
+}
+.adop-p-p1{
+    display: inline-block;
+    font-size: 16px;
+    color: #acafa5;
+    width:40%;
+    text-align: right;
+    margin-right: 20px;
+}
+.adop-p{
+    height:600px;
+    text-align: left;
+}
+.adop-p-t,.adop-p-t+p{
+    text-align: center;
+}

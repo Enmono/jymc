@@ -1,0 +1,32 @@
+.contact-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: #4cae4c;
+}
+.contact-st{
+    color: #afafaf;
+}
+.contact-mw{
+    color: #ff0000;
+    font-size: 10px;
+}
+#checkCode{
+    display:inline-block ;
+    border: 1px solid #bdbdbd;
+    color: #555555;
+    font-size:24px;
+    letter-spacing: 3px;
+    font-weight:bold;
+    cursor:pointer;
+    text-align:center;
+    vertical-align:middle;
+    width:30%;
+    border-radius: 5px;
+}
+#yzm-tip{
+    color: #ff0000;
+}
+#allmap {
+    width: 500px;
+    height: 300px;
+}

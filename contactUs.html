@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contactUs.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0& ak=rZ335jz7W6suGPgZ2jzLBGY55b30Pc2u">
+    </script>
+    <script src="js/map.js"></script>
+    <script>
+        $(window).scroll(function (){
+            var scrollPos=$(window).scrollTop();
+            console.log(scrollPos);
+            if (screen.width<768){
+                $('.navbar-default').css("backgroundColor","#fff");
+            }else if(screen.width>768 && scrollPos>220){
+                $('.navbar-default').css("backgroundColor","#b0b0b0");
+            }else{
+                $('.navbar-default').css("backgroundColor","transparent");
+            }
+        })
+    </script>
+</head>
+<body onload="createCode()">
+<div class="all-content" >
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"><i></i></a>
+                <a href="#" class="navbar-brand navbar-right">家有萌宠</a>
+                <a href="#menu" class="navbar-toggle" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </div>
+            <div id="menu" class="collapse navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="petService.html" data-toggle="dropdown" >宠物服务
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="petService.html">宠物服务</a></li>
+                            <li><a href="petAdoption.html">宠物寄养</a></li>
+                            <li><a href="petMedical.html">宠物医疗</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="petShow.html">宠物展示</a></li>
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <li class="active"><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img src="imgs/a1.jpg" class="img-responsive bgbg hidden-xs">
+     <h2 class="tab-h1 hidden-xs">CONTACT</h2>
+    <div id="tip">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="contact-title">欢迎访问宠物乐园！</p>
+                    <p class="contact-st">您的建议是我们前进的动力，我们也一直在不断的努力！</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <span class="contact-mw">(必填项)</span>
+                            <input type="text" class="form-control" id="name" placeholder="请输入姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <span class="contact-mw">(必填项)</span>
+                            <input type="email" class="form-control" id="email" placeholder="请输入邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="请输入电话">
+                        </div>
+                        <div class="form-group">
+                            <label for="content">内容</label>
+                            <span class="contact-mw">(必填项)</span>
+                            <textarea class="form-control" rows="3" id="content" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="yzm">验证码</label>
+                            <span class="contact-mw">(必填项)</span>
+                            <input type="text" class="form-control" id="yzm" placeholder="请输入下面的验证码" name="yzm" required>
+                        </div>
+                        <div class="code" id="checkCode" onclick="createCode()"></div>
+                        <span id="yzm-tip"></span>
+                        <p>使用表单之前需要配置表单的收件邮箱和网站的发件邮箱。详情请参考教程：<a href="#">《如何设置表单中的邮箱》</a></p>
+                        <button type="submit" class="btn btn-default">提交</button>
+                    </form>
+                </div>
+                <div class="col-md-6 pull-right" id="allmap">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="glyphicon glyphicon-time"></i>
+                    <div class="col-right">
+                        <p><strong>服务时间</strong></p>
+                        <p>周一至周五 / 08:00 – 18:00</p>
+                        <p>周六、周日 / 09:00 – 22:00</p>
+                    </div>
+                 </div>
+                <div class="col-md-4">
+                    <i class="glyphicon glyphicon-map-marker"></i>
+                    <div class="col-right">
+                        <p><strong>地址</strong></p>
+                        <p>[[公司地址]]</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    <div class="col-right">
+                        <p><strong>联系方式</strong></p>
+                        <p>电话 ：[[公司电话]]</p>
+                        <p>Email: [[公司邮箱]]</p>
+                    </div>
+                </div>
+             </div>
+            </div>
+        </div>
+</div>
+
+<div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">版权所有 ©2017 - 2017 家有萌宠</div>
+            </div>
+        </div>
+    </div>
+<script>
+    var code;
+    var $inputCode=$("#yzm");
+    var $tip=$("#yzm-tip");
+    function createCode()
+    {
+        code = "";
+        var codeLength = 4; //验证码的长度
+        var $checkCode = $("#checkCode");
+        var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+            'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //所有候选组成验证码的字符，当然也可以用中文的
+        for(var i = 0; i < codeLength; i++)
+        {
+            var charNum = Math.floor(Math.random() * 52);
+            code += codeChars[charNum];
+        }
+        if($checkCode)
+        {
+            $checkCode.html(code);
+        }
+    }
+    $(document).ready(function () {
+        $inputCode.focus(function () {
+            this.setAttribute("placeholder","");
+        })
+        $inputCode.blur(function () {
+            validateCode();
+        })
+    })
+    function validateCode()
+    {
+        var inputCode=$inputCode.val();
+        if(inputCode.length <= 0)
+        {
+            $tip.html("请输入验证码！");
+        }
+        else if(inputCode.toUpperCase() != code.toUpperCase())
+        {
+            $tip.html("验证码输入有误！");
+            createCode();
+            $inputCode.val("");
+        }
+        else
+        {
+            $tip.html("验证码正确！");
+        }
+    }
+</script>
+<script>
+    var points = [
+        {"lng":120.16,"lat":30.27,"url":"http://www.baidu.com","id":1,"name":"公司地址"},
+    ];
+    //创建标注点并添加到地图中
+    function addMarker(points) {
+        //循环建立标注点
+        for(var i=0, pointsLen = points.length; i<pointsLen; i++) {
+            var point = new BMap.Point(points[i].lng, points[i].lat); //将标注点转化成地图上的点
+            var marker = new BMap.Marker(point); //将点转化成标注点
+            map.addOverlay(marker);  //将标注点添加到地图上
+            //添加监听事件
+            (function() {
+                var thePoint = points[i];
+                marker.addEventListener("click",
+                    function() {
+                        showInfo(this,thePoint);
+                    });
+            })();
+        }
+    }
+    function showInfo(thisMarker,point) {
+        //获取点的信息
+        var sContent =
+            '<ul style="margin:0 0 5px 0;padding:0.2em 0">'
+            +'<li style="line-height: 26px;font-size: 15px;">'
+            +'<span style="width: 50px;display: inline-block;">id：</span>' + point.id + '</li>'
+            +'<li style="line-height: 26px;font-size: 15px;">'
+            +'<span style="width: 50px;display: inline-block;">名称：</span>' + point.name + '</li>'
+            +'<li style="line-height: 26px;font-size: 15px;"><span style="width: 50px;display: inline-block;">查看：</span><a href="'+point.url+'">详情</a></li>'
+            +'</ul>';
+        var infoWindow = new BMap.InfoWindow(sContent); //创建信息窗口对象
+        thisMarker.openInfoWindow(infoWindow); //图片加载完后重绘infoWindow
+    }
+    //创建地图
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(120.165825, 30.27131);
+    map.centerAndZoom(point, 14);
+    window.setTimeout(function(){
+        map.panTo(new BMap.Point(120.165825, 30.27131));
+    }, 2000);
+
+    map.addControl(new BMap.MapTypeControl());
+    map.addControl(new BMap.NavigationControl());
+    map.addControl(new BMap.ScaleControl());
+    map.addControl(new BMap.OverviewMapControl());
+    map.enableScrollWheelZoom(true);
+    addMarker(points);
+</script>
+</body>
+</html>
